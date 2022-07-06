@@ -10,4 +10,4 @@ class CreateChat(Signal):
         message = db.create('Message', user=user.pk, body=body, timestamp=timestamp)
         payload = message._to_dict()
         payload['username'] = user.username
-        return self.reponse(payload, ['Public'])
+        return self.response(payload, ['Public'])
